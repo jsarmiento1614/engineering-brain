@@ -49,14 +49,23 @@ Cada proyecto debe tener:
 [proyecto]/
 ├── index.md              # Dashboard del proyecto
 ├── architecture/         # Documentación de arquitectura
+│   └── YYYY-MM-DD/       # Organizado por fecha
 ├── implementations/      # Detalles de implementación
+│   └── YYYY-MM-DD/       # Organizado por fecha
 ├── api/                  # Documentación de API
+│   └── YYYY-MM-DD/       # Organizado por fecha
 ├── decisions/            # ADRs (Architecture Decision Records)
+│   └── YYYY-MM-DD/       # Organizado por fecha
 ├── ai-analysis/          # Análisis generados por IA
+│   └── YYYY-MM-DD/       # Organizado por fecha
 ├── issues/               # Problemas y bugs
+│   └── YYYY-MM-DD/       # Organizado por fecha
 ├── changelog/            # Historial de cambios
 └── notes/                # Notas misceláneas
+    └── YYYY-MM-DD/       # Organizado por fecha
 ```
+
+**IMPORTANTE**: La documentación diaria se organiza por fecha dentro de cada tipo de carpeta. Cada día de trabajo genera una carpeta nueva con formato `YYYY-MM-DD`.
 
 #### 5. **Categorías de Proyectos**
 - `freelance/` - Proyectos freelance
@@ -65,14 +74,69 @@ Cada proyecto debe tener:
 - `personal/` - Proyectos personales
 - `second-company/` - Proyectos de segunda empresa
 
+### Documentación Diaria por Proyecto
+
+**REGLA CRÍTICA**: Cuando se está trabajando en un proyecto específico (ej: microservicios de Albatros, frontend backoffice, etc.), **TODA la documentación generada ese día debe agregarse dentro del proyecto correspondiente, organizada por fecha**.
+
+#### Estructura de Documentación Diaria por Proyecto
+
+```
+[proyecto]/
+├── [tipo-documentacion]/
+│   └── YYYY-MM-DD/          # Carpeta con fecha del día
+│       ├── documento-1.md
+│       ├── documento-2.md
+│       └── ...
+```
+
+#### Ejemplos de Ubicación por Tipo
+
+- **Arquitectura del día**: `[proyecto]/architecture/YYYY-MM-DD/[nombre].md`
+- **Implementaciones del día**: `[proyecto]/implementations/YYYY-MM-DD/[nombre].md`
+- **Análisis de IA del día**: `[proyecto]/ai-analysis/YYYY-MM-DD/[nombre].md`
+- **Decisiones del día**: `[proyecto]/decisions/YYYY-MM-DD/[nombre].md`
+- **API del día**: `[proyecto]/api/YYYY-MM-DD/[nombre].md`
+- **Issues del día**: `[proyecto]/issues/YYYY-MM-DD/[nombre].md`
+- **Notas del día**: `[proyecto]/notes/YYYY-MM-DD/[nombre].md`
+
+#### Ejemplo Práctico: Microservicio ave-order
+
+Si estás trabajando en el microservicio `ave-order` el día 2026-03-07:
+
+```
+01-projects/freelance/albatros/backend/microservicios/ave-order/
+├── architecture/
+│   └── 2026-03-07/
+│       └── order-service-architecture.md
+├── implementations/
+│   └── 2026-03-07/
+│       └── payment-integration.md
+├── ai-analysis/
+│   └── 2026-03-07/
+│       └── code-review-analysis.md
+└── notes/
+    └── 2026-03-07/
+        └── meeting-notes.md
+```
+
+#### Reglas para Documentación Diaria
+
+1. **SIEMPRE crear carpeta con fecha** en formato `YYYY-MM-DD` dentro del tipo de documentación correspondiente
+2. **SIEMPRE usar la fecha del día actual** cuando se genera documentación
+3. **SIEMPRE colocar la documentación en el proyecto específico** donde se está trabajando
+4. **NUNCA mezclar documentación de diferentes días** en la misma carpeta
+5. **NUNCA crear documentación sin la estructura de fecha** cuando es documentación de trabajo diario
+
 ### Workflow Recomendado para IA
 
-1. **Identificar** el tipo de contenido a documentar
-2. **Seleccionar** la ubicación correcta según la estructura
-3. **Usar** el template apropiado de `05-templates/`
-4. **Incluir** enlaces a documentos relacionados usando `[[nombre]]`
-5. **Guardar** en el directorio correcto dentro de `engineering-brain`
-6. **NUNCA** generar documentación fuera de este directorio
+1. **Identificar** el proyecto en el que se está trabajando
+2. **Identificar** el tipo de contenido a documentar
+3. **Crear carpeta con fecha** `YYYY-MM-DD` dentro del tipo correspondiente del proyecto
+4. **Seleccionar** la ubicación correcta: `[proyecto]/[tipo]/YYYY-MM-DD/[nombre].md`
+5. **Usar** el template apropiado de `05-templates/`
+6. **Incluir** enlaces a documentos relacionados usando `[[nombre]]`
+7. **Guardar** en el directorio correcto dentro de `engineering-brain`
+8. **NUNCA** generar documentación fuera de este directorio
 
 ### Recordatorios Importantes para IA
 
@@ -80,9 +144,26 @@ Cada proyecto debe tener:
 - ✅ **SIEMPRE** seguir la estructura de directorios definida
 - ✅ **SIEMPRE** usar templates cuando estén disponibles
 - ✅ **SIEMPRE** incluir enlaces Obsidian a documentos relacionados
+- ✅ **SIEMPRE** crear carpeta con fecha `YYYY-MM-DD` para documentación diaria de proyectos
+- ✅ **SIEMPRE** colocar documentación en el proyecto específico donde se está trabajando
 - ✅ **NUNCA** generar documentación fuera de este directorio
 - ✅ **NUNCA** crear archivos sin seguir la estructura definida
+- ✅ **NUNCA** mezclar documentación de diferentes días en la misma carpeta
 - ✅ Este proyecto es **independiente** - no requiere configuración en otros proyectos
+
+### Ejemplos de Proyectos con Documentación Diaria
+
+#### Proyecto Albatros - Microservicios
+- **Ubicación base**: `01-projects/freelance/albatros/backend/microservicios/[nombre-microservicio]/`
+- **Ejemplo**: `01-projects/freelance/albatros/backend/microservicios/ave-order/architecture/2026-03-07/`
+
+#### Proyecto Albatros - Frontend
+- **Ubicación base**: `01-projects/freelance/albatros/frontend/backoffice/`
+- **Ejemplo**: `01-projects/freelance/albatros/frontend/backoffice/implementations/2026-03-07/`
+
+#### Proyecto Albatros - Packages
+- **Ubicación base**: `01-projects/freelance/albatros/packages/`
+- **Ejemplo**: `01-projects/freelance/albatros/packages/notes/2026-03-07/`
 
 ---
 
