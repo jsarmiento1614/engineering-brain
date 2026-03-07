@@ -69,8 +69,10 @@ Cada proyecto debe tener:
 
 #### 5. **Categorías de Proyectos**
 - `freelance/` - Proyectos freelance (incluye proyectos de segunda empresa)
-- `outsourcing/` - Proyectos de outsourcing
-- `work-main-company/` - Proyectos de la empresa principal
+- `outsourcing/` - Proyectos de outsourcing externos
+- `work-main/` - Proyectos de la empresa principal
+  - `inner-project/` - Proyectos internos
+  - `outsourcing/` - Proyectos de outsourcing de la empresa
 - `personal/` - Proyectos personales
 
 ### Documentación Diaria por Proyecto
@@ -177,8 +179,10 @@ Si estás trabajando en el microservicio `ave-order` el día 2026-03-07:
 engineering-brain/
 ├── 01-projects/          # Proyectos profesionales
 │   ├── freelance/        # Proyectos freelance (incluye segunda empresa)
-│   ├── outsourcing/      # Proyectos de outsourcing
-│   ├── work-main-company/ # Proyectos empresa principal
+│   ├── outsourcing/      # Proyectos de outsourcing externos
+│   ├── work-main/        # Proyectos empresa principal
+│   │   ├── inner-project/ # Proyectos internos
+│   │   └── outsourcing/   # Proyectos outsourcing de la empresa
 │   └── personal/         # Proyectos personales
 ├── 02-knowledge/         # Conocimiento transversal
 │   ├── ai/               # Conocimiento sobre IA
