@@ -68,11 +68,10 @@ Cada proyecto debe tener:
 **IMPORTANTE**: La documentación diaria se organiza por fecha dentro de cada tipo de carpeta. Cada día de trabajo genera una carpeta nueva con formato `YYYY-MM-DD`.
 
 #### 5. **Categorías de Proyectos**
-- `freelance/` - Proyectos freelance
+- `freelance/` - Proyectos freelance (incluye proyectos de segunda empresa)
 - `outsourcing/` - Proyectos de outsourcing
 - `work-main-company/` - Proyectos de la empresa principal
 - `personal/` - Proyectos personales
-- `second-company/` - Proyectos de segunda empresa
 
 ### Documentación Diaria por Proyecto
 
@@ -177,11 +176,10 @@ Si estás trabajando en el microservicio `ave-order` el día 2026-03-07:
 ```
 engineering-brain/
 ├── 01-projects/          # Proyectos profesionales
-│   ├── freelance/        # Proyectos freelance
+│   ├── freelance/        # Proyectos freelance (incluye segunda empresa)
 │   ├── outsourcing/      # Proyectos de outsourcing
 │   ├── work-main-company/ # Proyectos empresa principal
-│   ├── personal/         # Proyectos personales
-│   └── second-company/    # Proyectos segunda empresa
+│   └── personal/         # Proyectos personales
 ├── 02-knowledge/         # Conocimiento transversal
 │   ├── ai/               # Conocimiento sobre IA
 │   ├── architecture/     # Patrones y arquitecturas
