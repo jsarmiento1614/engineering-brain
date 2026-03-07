@@ -162,8 +162,13 @@ Si estás trabajando en el microservicio `ave-order` el día 2026-03-07:
 - **Ejemplo**: `01-projects/freelance/albatros/frontend/backoffice/implementations/2026-03-07/`
 
 #### Proyecto Albatros - Packages
-- **Ubicación base**: `01-projects/freelance/albatros/packages/`
-- **Ejemplo**: `01-projects/freelance/albatros/packages/notes/2026-03-07/`
+- **Ubicación base**: `01-projects/freelance/albatros/packages/[nombre-package]/`
+- **Packages disponibles**: 
+  - `ave-auth-decorators-package` - Decoradores de autenticación
+  - `ave-authorization-package` - Package de autorización
+  - `ave-models-package` - Modelos compartidos
+  - `ave-utils-npm` - Utilidades compartidas
+- **Ejemplo**: `01-projects/freelance/albatros/packages/ave-auth-decorators-package/notes/2026-03-07/`
 
 ---
 
